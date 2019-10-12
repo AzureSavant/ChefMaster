@@ -1,0 +1,13 @@
+.recipe{
+    box-shadow: none;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    flex-direction: row;
+    min-height:30%;
+    align-items: center;
+    text-align: justify;
+}
+.ul{
+    list-style-type: none;
+}

@@ -8,12 +8,12 @@ const Recipe= ({title,ingredients,healthLabels,image}) =>{
             <ul ><h5>Ingredients:</h5>
                 {ingredients.map(ingredient =>(
 
-                    <li key={title}>{ingredient.text}</li>
+                    <li >{ingredient.text}</li>
                 ))}
             </ul>
             <ul> <h5> Health Labels:</h5>
                 {healthLabels.map(healthLabel=>(
-                    <li key={title}>{healthLabel}</li>
+                    <li >{healthLabel}</li>
                 ))}
             </ul>
             <img src={image} alt="" />

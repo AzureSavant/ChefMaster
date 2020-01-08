@@ -17,12 +17,15 @@ function SearchCall() {
         setQuery(search);
     };
     const getRecipes = async () => {
-        const response = await fetch(
-            `https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_APP_ID}
-            &app_key=${process.env.REACT_APP_API_KEY}`);
+        var url ='https://api.edamam.com/search?q='+query+'&app_id='+process.env.REACT_APP_APP_ID+
+        '&app_key='+process.env.REACT_APP_API_KEY;
+    
+        const response = await fetch('https://cors-anywhere.herokuapp.com/'+url);    //CORS problem with fetch call
+                                                                    // using `https://cors-anywhere.herokuapp.com/` as third party
         const data = await response.json();
         setRecipes(data.hits);
     };
+
     return (
         <div>
             <form className="form" onSubmit={getSearch}>
@@ -39,5 +42,5 @@ function SearchCall() {
             ))}
         </div>
     );
-}
+  };
 export default SearchCall;

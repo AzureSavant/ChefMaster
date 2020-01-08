@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import Container from '@material-ui/core/Container';
 
 import SearchCall from './Components/SearchCall.js';
 import './App.css';
@@ -7,9 +8,12 @@ import './App.css';
 function App(){
    
     return (
-        <div className="App">
+        <Container className="App" maxWidth="sm">
+            <p>asdfsdf</p>
             <SearchCall />
-        </div>
+            <pre></pre>
+
+        </Container>
     );
 };
 
